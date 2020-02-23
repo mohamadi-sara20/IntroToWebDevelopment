@@ -1,0 +1,28 @@
+h1{
+  font-family:"Helvetica";
+}
+
+p{
+  font-family: monospace;
+}
+body{
+  font-size: 20px;
+
+}
+
+#two{
+  font-size: 2.0em;
+}
+
+p{
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Trade Winds' ;
+
+
+}
+
+h1{
+  text-align: center;
+
+}
