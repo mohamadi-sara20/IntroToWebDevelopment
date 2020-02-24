@@ -1,0 +1,39 @@
+#name{
+  text-align: center;
+  font-family: Pacifico;
+  font-weight: bold;
+}
+
+body{
+  font-size: 27px;
+}
+
+#colorTable{
+  margin: 0 auto;
+}
+
+/* cells */
+td{
+  height: 400px;
+  width: 150px;
+  border: 5px solid white;
+
+}
+
+#first{
+  background-color: #1098F7;
+
+
+}
+#second{
+  background-color: #33DDCC;
+}
+#third{
+  background-color: #748F52;
+}
+#fourth{
+  background-color: #FFD400;
+}
+#fifth{
+  background: #6D0118;
+}
