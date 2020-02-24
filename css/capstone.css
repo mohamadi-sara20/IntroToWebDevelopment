@@ -1,0 +1,35 @@
+body{
+  background-color: #001C57;
+  border-right: 60px solid #029aa6;
+  border-left: 60px solid #029aa6;
+  border-bottom: 60px solid #029aa6;
+  margin: 20px 0px 0px 0px;
+}
+
+div{
+  text-align: center;
+  font-family: Montserrat;
+  color: white;
+  padding: 0px 230px 4px 230px;
+}
+
+label{
+  text-align: center;
+}
+
+input{
+  height: 30px;
+  width: 220px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+#sumbitButton{
+  background-color: #ff9e03;
+  height: 80px;
+  width: 150px;
+  border-radius: 25px;
+  font-size:21px;
+  font-style: thin;
+  font-family: Helvetica;
+}
