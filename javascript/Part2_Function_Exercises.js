@@ -115,7 +115,7 @@ function luckySum(a, b, c){
 
 function caught_speeding(speed, is_birthday){
   if(is_birthday){
-    return 0;
+    speed -= 5
   }
   else {
     if(speed <= 60){
