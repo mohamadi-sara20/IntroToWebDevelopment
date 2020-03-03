@@ -20,5 +20,5 @@ from AppTwo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.index, name='index'),
-    re_path(r'^ProTwo/', include('AppTwo.urls')),
+    re_path(r'^myNewExtension/', include('AppTwo.urls')),
 ]
