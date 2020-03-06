@@ -24,4 +24,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.index, name='index'),
     re_path(r'^myNewExtension/', include('AppTwo.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+ ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
