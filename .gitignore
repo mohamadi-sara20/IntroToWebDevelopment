@@ -1,4 +1,4 @@
 .DS_Store
 *.pyc
 first_project/
-*/__pycache__/*
+__pycache__/
