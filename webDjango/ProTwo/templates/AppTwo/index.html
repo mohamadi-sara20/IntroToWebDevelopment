@@ -10,8 +10,22 @@
   </head>
   <body>
     <h1>Hello! This is index.html </h1>
-    {{insert_me}}
+    <h2>Here are your access records: </h2>
+    <!-- {{insert_me}} -->
+    <div class="djangtwo">
+      {% if access %}
+      <table>
+        {{'<thead> <th>Site Name</th>    <th>Date Accessed</th> </thead>'}}
+        {% for acc in access%}
+        <tr>
+          <td>{{acc.name}}</td>
+          <td>{{acc.date}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+      {% endif %}
 
+    </div>
     <img src="{% static 'images/pic1.jpeg' %}" alt="My image">
   </body>
 </html>
