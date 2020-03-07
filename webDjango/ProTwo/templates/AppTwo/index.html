@@ -12,7 +12,7 @@
     <h1>Hello! This is index.html </h1>
     <h2>Here are your access records: </h2>
     <!-- {{insert_me}} -->
-    <div class="djangtwo">
+    <div class="djangotwo">
       {% if access %}
       <table>
         {{'<thead> <th>Site Name</th>    <th>Date Accessed</th> </thead>'}}
@@ -23,7 +23,9 @@
         </tr>
         {%endfor%}
       </table>
-      {% endif %}
+      {% else %}
+        <p>NO RECORD FOUND</p>
+      {%endif%}
 
     </div>
     <img src="{% static 'images/pic1.jpeg' %}" alt="My image">
