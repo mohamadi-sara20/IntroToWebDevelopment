@@ -20,6 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.IndexView .as_view()),
     re_path(r'^basicApp/', include('basicApp.urls', namespace='basicApp')),
-    re_path(r'^(?P<pk>[-\w]+)/$', views.SchoolDetailView.as_view(), name='detail')
-
 ]
