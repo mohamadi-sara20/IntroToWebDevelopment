@@ -1,10 +1,53 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Base</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text|Source+Sans+Pro&display=swap" rel="stylesheet">
   </head>
   <body>
+    <nav class="navbar sticky-top navbar-light bg-light">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li><a class='navbar-brand' href="{% url 'post_list' %}">My Blog</a></li>
+          <li><a href="{% url 'about' %}" "">About</a></li>
+          <li><a href="https://www.github.com">Github</a></li>
+          <li><a href="https://www.linkedin.com">Linkedin</a></li>
+        </ul>
+
+        <ul class="navbar-nav">
+          {% if user.is_authenticated%}
+            <li><a href="{% url 'post_new' %}">New Post</a></li>
+            <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a>Welcome {{user.username}}</a></li>
+          {% else %}
+            <li><a class='r1' href="{% url 'login' %}"><span class='glyphicon glyphicon-user'></span></a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="blog_posts">
+            {% block content %}
+            {% endblock %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
 
   </body>
 </html>
