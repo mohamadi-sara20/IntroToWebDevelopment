@@ -1,6 +1,5 @@
 from django.urls import path, re_path
 from . import views
-
 urlpatterns = [
         re_path(r'^about/$', views.AboutView.as_view(), name='about'),
         re_path(r'^$', views.PostListView.as_view(), name='post_list'),
